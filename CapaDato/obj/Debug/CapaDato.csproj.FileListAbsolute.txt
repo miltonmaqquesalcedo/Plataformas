@@ -1,0 +1,6 @@
+C:\Users\Pavel\Desktop\Semestre 2020-II\Plataformas\Segunda Unidad\SistemaUnidadII\CapaDato\bin\Debug\CapaDato.dll
+C:\Users\Pavel\Desktop\Semestre 2020-II\Plataformas\Segunda Unidad\SistemaUnidadII\CapaDato\bin\Debug\CapaDato.pdb
+C:\Users\Pavel\Desktop\Semestre 2020-II\Plataformas\Segunda Unidad\SistemaUnidadII\CapaDato\obj\Debug\CapaDato.csprojAssemblyReference.cache
+C:\Users\Pavel\Desktop\Semestre 2020-II\Plataformas\Segunda Unidad\SistemaUnidadII\CapaDato\obj\Debug\CapaDato.csproj.CoreCompileInputs.cache
+C:\Users\Pavel\Desktop\Semestre 2020-II\Plataformas\Segunda Unidad\SistemaUnidadII\CapaDato\obj\Debug\CapaDato.dll
+C:\Users\Pavel\Desktop\Semestre 2020-II\Plataformas\Segunda Unidad\SistemaUnidadII\CapaDato\obj\Debug\CapaDato.pdb
