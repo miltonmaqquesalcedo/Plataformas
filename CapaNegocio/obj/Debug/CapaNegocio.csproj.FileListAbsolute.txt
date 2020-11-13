@@ -1,0 +1,11 @@
+C:\Users\Pavel\Desktop\Semestre 2020-II\Plataformas\Segunda Unidad\SistemaUnidadII\CapaNegocio\bin\Debug\CapaNegocio.dll
+C:\Users\Pavel\Desktop\Semestre 2020-II\Plataformas\Segunda Unidad\SistemaUnidadII\CapaNegocio\bin\Debug\CapaNegocio.pdb
+C:\Users\Pavel\Desktop\Semestre 2020-II\Plataformas\Segunda Unidad\SistemaUnidadII\CapaNegocio\bin\Debug\CapaDato.dll
+C:\Users\Pavel\Desktop\Semestre 2020-II\Plataformas\Segunda Unidad\SistemaUnidadII\CapaNegocio\bin\Debug\CapaEntidad.dll
+C:\Users\Pavel\Desktop\Semestre 2020-II\Plataformas\Segunda Unidad\SistemaUnidadII\CapaNegocio\bin\Debug\CapaDato.pdb
+C:\Users\Pavel\Desktop\Semestre 2020-II\Plataformas\Segunda Unidad\SistemaUnidadII\CapaNegocio\bin\Debug\CapaEntidad.pdb
+C:\Users\Pavel\Desktop\Semestre 2020-II\Plataformas\Segunda Unidad\SistemaUnidadII\CapaNegocio\obj\Debug\CapaNegocio.csprojAssemblyReference.cache
+C:\Users\Pavel\Desktop\Semestre 2020-II\Plataformas\Segunda Unidad\SistemaUnidadII\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\Pavel\Desktop\Semestre 2020-II\Plataformas\Segunda Unidad\SistemaUnidadII\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete
+C:\Users\Pavel\Desktop\Semestre 2020-II\Plataformas\Segunda Unidad\SistemaUnidadII\CapaNegocio\obj\Debug\CapaNegocio.dll
+C:\Users\Pavel\Desktop\Semestre 2020-II\Plataformas\Segunda Unidad\SistemaUnidadII\CapaNegocio\obj\Debug\CapaNegocio.pdb
