@@ -72,5 +72,20 @@ namespace CapaServicio
             BoletaBL boleta = new BoletaBL();
             return boleta.Buscar(texto, Categoria);
         }
+
+        [WebMethod(Description = "Imprimir Boleta")]
+        public DataSet ListarBoleta(string NroBoleta)
+        {
+            BoletaBL boleta = new BoletaBL();
+            return boleta.ListarBoleta(NroBoleta);
+        }
+
+        [WebMethod(Description = "Imprimir Detalle")]
+        public DataSet ListarDetalle(string NroBoleta)
+        {
+            BoletaBL boleta = new BoletaBL();
+            return boleta.ListaDetalle(NroBoleta);
+        }
+
     }
 }

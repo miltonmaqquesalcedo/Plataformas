@@ -59,7 +59,7 @@ namespace CapaServicio
             detalle.Cantidad = Cantidad;
 
             DetalleBL detalleBL = new DetalleBL();
-            if (detalleBL.Agregar(detalle)) return true;
+            if (detalleBL.Actualizar(detalle)) return true;
             else return false;
         }
 

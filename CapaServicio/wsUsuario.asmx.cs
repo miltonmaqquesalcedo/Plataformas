@@ -40,6 +40,40 @@ namespace CapaServicio
             return respuesta;
         }
 
+        [WebMethod(Description = "Cambiar Vendedor")]
+        public string[] CambiarVendedor(string usuario, string contrasena, string nueva)
+        {
+            Usuario usuario1 = new Usuario();
+            usuario1._Usuario = usuario;
+            //usuario1._Contrasena = generarClaveSHA1(contrasena);
+            usuario1._Contrasena = generarClaveSHA1(contrasena);
+            usuario1._Nueva = generarClaveSHA1(nueva);
+            UsuarioBL usuarioBL = new UsuarioBL();
+            string[] respuesta = new string[2];
+            bool CodError = usuarioBL.CambiarVendedor(usuario1);
+            if (CodError == true) respuesta[0] = "true";
+            else respuesta[0] = "false";
+            respuesta[1] = usuarioBL.Mensaje;
+            return respuesta;
+        }
+
+        [WebMethod(Description = "Cambiar Cliente")]
+        public string[] CambiarCliente(string usuario, string contrasena, string nueva)
+        {
+            Usuario usuario1 = new Usuario();
+            usuario1._Usuario = usuario;
+            //usuario1._Contrasena = generarClaveSHA1(contrasena);
+            usuario1._Contrasena = contrasena;
+            usuario1._Nueva = nueva;
+            UsuarioBL usuarioBL = new UsuarioBL();
+            string[] respuesta = new string[2];
+            bool CodError = usuarioBL.CambiarCliente(usuario1);
+            if (CodError == true) respuesta[0] = "true";
+            else respuesta[0] = "false";
+            respuesta[1] = usuarioBL.Mensaje;
+            return respuesta;
+        }
+
         private string generarClaveSHA1(string cadena)
         {
             UTF8Encoding enc = new UTF8Encoding();

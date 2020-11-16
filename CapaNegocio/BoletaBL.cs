@@ -55,5 +55,20 @@ namespace CapaNegocio
         {
             return datos.TraerDataSet("spListarBoleta");
         }
+
+        public DataSet ListarBoleta(string NroBoleta) 
+        {
+            return datos.TraerDataSet("spImprimirBoleta", NroBoleta);
+        }
+
+        public DataSet ListaDetalle(string NroBoleta)
+        {
+            return datos.TraerDataSet("spImprimirBoletaDetalles", NroBoleta);
+        }
+
+        public DataSet ListarDetalle(string NroBoleta)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

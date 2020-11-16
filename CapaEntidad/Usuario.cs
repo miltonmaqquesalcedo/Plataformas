@@ -17,5 +17,9 @@ namespace CapaEntidad
         [DataMember]
         public string _Contrasena
         { get; set; }
+
+        [DataMember]
+        public string _Nueva
+        { get; set; }
     }
 }

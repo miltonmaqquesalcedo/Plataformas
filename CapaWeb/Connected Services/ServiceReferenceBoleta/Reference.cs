@@ -50,6 +50,20 @@ namespace CapaWeb.ServiceReferenceBoleta {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Buscar", ReplyAction="*")]
         System.Threading.Tasks.Task<System.Data.DataSet> BuscarAsync(string texto, string Categoria);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ListarBoleta", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet ListarBoleta(string NroBoleta);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ListarBoleta", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> ListarBoletaAsync(string NroBoleta);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ListarDetalle", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet ListarDetalle(string NroBoleta);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ListarDetalle", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> ListarDetalleAsync(string NroBoleta);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -117,6 +131,22 @@ namespace CapaWeb.ServiceReferenceBoleta {
         
         public System.Threading.Tasks.Task<System.Data.DataSet> BuscarAsync(string texto, string Categoria) {
             return base.Channel.BuscarAsync(texto, Categoria);
+        }
+        
+        public System.Data.DataSet ListarBoleta(string NroBoleta) {
+            return base.Channel.ListarBoleta(NroBoleta);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> ListarBoletaAsync(string NroBoleta) {
+            return base.Channel.ListarBoletaAsync(NroBoleta);
+        }
+        
+        public System.Data.DataSet ListarDetalle(string NroBoleta) {
+            return base.Channel.ListarDetalle(NroBoleta);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> ListarDetalleAsync(string NroBoleta) {
+            return base.Channel.ListarDetalleAsync(NroBoleta);
         }
     }
 }

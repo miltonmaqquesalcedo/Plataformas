@@ -28,5 +28,24 @@ namespace CapaNegocio
             if (codError == 0) return true;
             else return false;
         }
+
+        public bool CambiarCliente(Usuario usuario1)
+        {
+            DataRow fila = datos.TraerDataRow("spCambioContraseñaCliente", usuario1._Usuario, usuario1._Contrasena,usuario1._Nueva);
+            mensaje = fila["Mensaje"].ToString();
+            byte codError = Convert.ToByte(fila["CodError"]);
+            if (codError == 0) return true;
+            else return false;
+        }
+
+        public bool CambiarVendedor(Usuario usuario)
+        {
+            DataRow fila = datos.TraerDataRow("spCambioContraseñaVendedor", usuario._Usuario, usuario._Contrasena, usuario._Nueva);
+            mensaje = fila["Mensaje"].ToString();
+            byte codError = Convert.ToByte(fila["CodError"]);
+            if (codError == 0) return true;
+            else return false;
+        }
+
     }
 }

@@ -30,6 +30,20 @@ namespace CapaWeb.ServiceReferenceUsuario {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Login", ReplyAction="*")]
         System.Threading.Tasks.Task<CapaWeb.ServiceReferenceUsuario.LoginResponse> LoginAsync(CapaWeb.ServiceReferenceUsuario.LoginRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento usuario del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CambiarVendedor", ReplyAction="*")]
+        CapaWeb.ServiceReferenceUsuario.CambiarVendedorResponse CambiarVendedor(CapaWeb.ServiceReferenceUsuario.CambiarVendedorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CambiarVendedor", ReplyAction="*")]
+        System.Threading.Tasks.Task<CapaWeb.ServiceReferenceUsuario.CambiarVendedorResponse> CambiarVendedorAsync(CapaWeb.ServiceReferenceUsuario.CambiarVendedorRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento usuario del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CambiarCliente", ReplyAction="*")]
+        CapaWeb.ServiceReferenceUsuario.CambiarClienteResponse CambiarCliente(CapaWeb.ServiceReferenceUsuario.CambiarClienteRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CambiarCliente", ReplyAction="*")]
+        System.Threading.Tasks.Task<CapaWeb.ServiceReferenceUsuario.CambiarClienteResponse> CambiarClienteAsync(CapaWeb.ServiceReferenceUsuario.CambiarClienteRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -104,6 +118,158 @@ namespace CapaWeb.ServiceReferenceUsuario {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class CambiarVendedorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="CambiarVendedor", Namespace="http://tempuri.org/", Order=0)]
+        public CapaWeb.ServiceReferenceUsuario.CambiarVendedorRequestBody Body;
+        
+        public CambiarVendedorRequest() {
+        }
+        
+        public CambiarVendedorRequest(CapaWeb.ServiceReferenceUsuario.CambiarVendedorRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class CambiarVendedorRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string usuario;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string contrasena;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public string nueva;
+        
+        public CambiarVendedorRequestBody() {
+        }
+        
+        public CambiarVendedorRequestBody(string usuario, string contrasena, string nueva) {
+            this.usuario = usuario;
+            this.contrasena = contrasena;
+            this.nueva = nueva;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class CambiarVendedorResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="CambiarVendedorResponse", Namespace="http://tempuri.org/", Order=0)]
+        public CapaWeb.ServiceReferenceUsuario.CambiarVendedorResponseBody Body;
+        
+        public CambiarVendedorResponse() {
+        }
+        
+        public CambiarVendedorResponse(CapaWeb.ServiceReferenceUsuario.CambiarVendedorResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class CambiarVendedorResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public CapaWeb.ServiceReferenceUsuario.ArrayOfString CambiarVendedorResult;
+        
+        public CambiarVendedorResponseBody() {
+        }
+        
+        public CambiarVendedorResponseBody(CapaWeb.ServiceReferenceUsuario.ArrayOfString CambiarVendedorResult) {
+            this.CambiarVendedorResult = CambiarVendedorResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class CambiarClienteRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="CambiarCliente", Namespace="http://tempuri.org/", Order=0)]
+        public CapaWeb.ServiceReferenceUsuario.CambiarClienteRequestBody Body;
+        
+        public CambiarClienteRequest() {
+        }
+        
+        public CambiarClienteRequest(CapaWeb.ServiceReferenceUsuario.CambiarClienteRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class CambiarClienteRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string usuario;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string contrasena;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public string nueva;
+        
+        public CambiarClienteRequestBody() {
+        }
+        
+        public CambiarClienteRequestBody(string usuario, string contrasena, string nueva) {
+            this.usuario = usuario;
+            this.contrasena = contrasena;
+            this.nueva = nueva;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class CambiarClienteResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="CambiarClienteResponse", Namespace="http://tempuri.org/", Order=0)]
+        public CapaWeb.ServiceReferenceUsuario.CambiarClienteResponseBody Body;
+        
+        public CambiarClienteResponse() {
+        }
+        
+        public CambiarClienteResponse(CapaWeb.ServiceReferenceUsuario.CambiarClienteResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class CambiarClienteResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public CapaWeb.ServiceReferenceUsuario.ArrayOfString CambiarClienteResult;
+        
+        public CambiarClienteResponseBody() {
+        }
+        
+        public CambiarClienteResponseBody(CapaWeb.ServiceReferenceUsuario.ArrayOfString CambiarClienteResult) {
+            this.CambiarClienteResult = CambiarClienteResult;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface wsUsuarioSoapChannel : CapaWeb.ServiceReferenceUsuario.wsUsuarioSoap, System.ServiceModel.IClientChannel {
     }
@@ -156,6 +322,64 @@ namespace CapaWeb.ServiceReferenceUsuario {
             inValue.Body.usuario = usuario;
             inValue.Body.contrasena = contrasena;
             return ((CapaWeb.ServiceReferenceUsuario.wsUsuarioSoap)(this)).LoginAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CapaWeb.ServiceReferenceUsuario.CambiarVendedorResponse CapaWeb.ServiceReferenceUsuario.wsUsuarioSoap.CambiarVendedor(CapaWeb.ServiceReferenceUsuario.CambiarVendedorRequest request) {
+            return base.Channel.CambiarVendedor(request);
+        }
+        
+        public CapaWeb.ServiceReferenceUsuario.ArrayOfString CambiarVendedor(string usuario, string contrasena, string nueva) {
+            CapaWeb.ServiceReferenceUsuario.CambiarVendedorRequest inValue = new CapaWeb.ServiceReferenceUsuario.CambiarVendedorRequest();
+            inValue.Body = new CapaWeb.ServiceReferenceUsuario.CambiarVendedorRequestBody();
+            inValue.Body.usuario = usuario;
+            inValue.Body.contrasena = contrasena;
+            inValue.Body.nueva = nueva;
+            CapaWeb.ServiceReferenceUsuario.CambiarVendedorResponse retVal = ((CapaWeb.ServiceReferenceUsuario.wsUsuarioSoap)(this)).CambiarVendedor(inValue);
+            return retVal.Body.CambiarVendedorResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CapaWeb.ServiceReferenceUsuario.CambiarVendedorResponse> CapaWeb.ServiceReferenceUsuario.wsUsuarioSoap.CambiarVendedorAsync(CapaWeb.ServiceReferenceUsuario.CambiarVendedorRequest request) {
+            return base.Channel.CambiarVendedorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CapaWeb.ServiceReferenceUsuario.CambiarVendedorResponse> CambiarVendedorAsync(string usuario, string contrasena, string nueva) {
+            CapaWeb.ServiceReferenceUsuario.CambiarVendedorRequest inValue = new CapaWeb.ServiceReferenceUsuario.CambiarVendedorRequest();
+            inValue.Body = new CapaWeb.ServiceReferenceUsuario.CambiarVendedorRequestBody();
+            inValue.Body.usuario = usuario;
+            inValue.Body.contrasena = contrasena;
+            inValue.Body.nueva = nueva;
+            return ((CapaWeb.ServiceReferenceUsuario.wsUsuarioSoap)(this)).CambiarVendedorAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CapaWeb.ServiceReferenceUsuario.CambiarClienteResponse CapaWeb.ServiceReferenceUsuario.wsUsuarioSoap.CambiarCliente(CapaWeb.ServiceReferenceUsuario.CambiarClienteRequest request) {
+            return base.Channel.CambiarCliente(request);
+        }
+        
+        public CapaWeb.ServiceReferenceUsuario.ArrayOfString CambiarCliente(string usuario, string contrasena, string nueva) {
+            CapaWeb.ServiceReferenceUsuario.CambiarClienteRequest inValue = new CapaWeb.ServiceReferenceUsuario.CambiarClienteRequest();
+            inValue.Body = new CapaWeb.ServiceReferenceUsuario.CambiarClienteRequestBody();
+            inValue.Body.usuario = usuario;
+            inValue.Body.contrasena = contrasena;
+            inValue.Body.nueva = nueva;
+            CapaWeb.ServiceReferenceUsuario.CambiarClienteResponse retVal = ((CapaWeb.ServiceReferenceUsuario.wsUsuarioSoap)(this)).CambiarCliente(inValue);
+            return retVal.Body.CambiarClienteResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CapaWeb.ServiceReferenceUsuario.CambiarClienteResponse> CapaWeb.ServiceReferenceUsuario.wsUsuarioSoap.CambiarClienteAsync(CapaWeb.ServiceReferenceUsuario.CambiarClienteRequest request) {
+            return base.Channel.CambiarClienteAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CapaWeb.ServiceReferenceUsuario.CambiarClienteResponse> CambiarClienteAsync(string usuario, string contrasena, string nueva) {
+            CapaWeb.ServiceReferenceUsuario.CambiarClienteRequest inValue = new CapaWeb.ServiceReferenceUsuario.CambiarClienteRequest();
+            inValue.Body = new CapaWeb.ServiceReferenceUsuario.CambiarClienteRequestBody();
+            inValue.Body.usuario = usuario;
+            inValue.Body.contrasena = contrasena;
+            inValue.Body.nueva = nueva;
+            return ((CapaWeb.ServiceReferenceUsuario.wsUsuarioSoap)(this)).CambiarClienteAsync(inValue);
         }
     }
 }

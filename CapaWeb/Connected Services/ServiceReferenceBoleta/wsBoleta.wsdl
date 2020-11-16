@@ -89,6 +89,48 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="ListarBoleta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NroBoleta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarBoletaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListarBoletaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarDetalle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NroBoleta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarDetalleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListarDetalleResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="ListarSoapIn">
@@ -121,6 +163,18 @@
   <wsdl:message name="BuscarSoapOut">
     <wsdl:part name="parameters" element="tns:BuscarResponse" />
   </wsdl:message>
+  <wsdl:message name="ListarBoletaSoapIn">
+    <wsdl:part name="parameters" element="tns:ListarBoleta" />
+  </wsdl:message>
+  <wsdl:message name="ListarBoletaSoapOut">
+    <wsdl:part name="parameters" element="tns:ListarBoletaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListarDetalleSoapIn">
+    <wsdl:part name="parameters" element="tns:ListarDetalle" />
+  </wsdl:message>
+  <wsdl:message name="ListarDetalleSoapOut">
+    <wsdl:part name="parameters" element="tns:ListarDetalleResponse" />
+  </wsdl:message>
   <wsdl:portType name="wsBoletaSoap">
     <wsdl:operation name="Listar">
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Listar datos de la tabla Boleta</wsdl:documentation>
@@ -146,6 +200,16 @@
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Buscar Boleta</wsdl:documentation>
       <wsdl:input message="tns:BuscarSoapIn" />
       <wsdl:output message="tns:BuscarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarBoleta">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Imprimir Boleta</wsdl:documentation>
+      <wsdl:input message="tns:ListarBoletaSoapIn" />
+      <wsdl:output message="tns:ListarBoletaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarDetalle">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Imprimir Detalle</wsdl:documentation>
+      <wsdl:input message="tns:ListarDetalleSoapIn" />
+      <wsdl:output message="tns:ListarDetalleSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="wsBoletaSoap" type="tns:wsBoletaSoap">
@@ -195,6 +259,24 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="ListarBoleta">
+      <soap:operation soapAction="http://tempuri.org/ListarBoleta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarDetalle">
+      <soap:operation soapAction="http://tempuri.org/ListarDetalle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="wsBoletaSoap12" type="tns:wsBoletaSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -236,6 +318,24 @@
     </wsdl:operation>
     <wsdl:operation name="Buscar">
       <soap12:operation soapAction="http://tempuri.org/Buscar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarBoleta">
+      <soap12:operation soapAction="http://tempuri.org/ListarBoleta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarDetalle">
+      <soap12:operation soapAction="http://tempuri.org/ListarDetalle" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

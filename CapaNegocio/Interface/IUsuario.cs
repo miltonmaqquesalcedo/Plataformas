@@ -11,5 +11,7 @@ namespace CapaNegocio.Interface
     interface IUsuario
     {
         bool Login(Usuario usuario);
+        bool CambiarCliente(Usuario usuario);
+        bool CambiarVendedor(Usuario usuario);
     }
 }

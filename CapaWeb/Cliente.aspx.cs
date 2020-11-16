@@ -35,23 +35,22 @@ namespace CapaWeb
 
         }
 
-        protected void btnCambiar_Click1(object sender, EventArgs e)
-        {
-            Contra.ActiveViewIndex = 0;
-            btnCambiar.Visible = false;
-        }
+        
 
         protected void btnEliminar_Click(object sender, EventArgs e)
         {
-            //servicio.Eliminar(codigoCliente);
+            servicio.Eliminar(codigoCliente);
             
             Session.RemoveAll();
             Session.Abandon();
             Response.Cookies.Add(new HttpCookie("ASP.NET_SessionId", ""));
             Response.AppendHeader("Cache-Control", "no-store");
             Response.Redirect("LoginCliente.aspx");
-        }       
+        }
 
-        
+        protected void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("LoginCliente.aspx");
+        }
     }
 }

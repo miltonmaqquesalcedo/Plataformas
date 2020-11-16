@@ -1,23 +1,20 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AccesoVendedor.aspx.cs" Inherits="CapaWeb.AccesoVendedor" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <div align="center">
-            <h2><asp:Label ID="lblNombre" runat="server" Text="a "></asp:Label></h2>
-            <asp:Button class="btn btn-info" runat="server" ID="btnCambiar" text="Cambiar mi contraseña" OnClick="btnCambiar_Click1"/>
-            <asp:Button class="btn btn-danger" runat="server" ID="btnEliminar" text="Eliminar Cuenta" OnClick="btnEliminar_Click" />
-            <asp:Button class="btn btn-success" runat="server" ID="btnExcel" text="Exportar Excel" OnClick="btnExcel_Click" />
-            <asp:Button class="btn btn-warning" runat="server" ID="btnPdf" text="Exportar Pdf" OnClick="btnPdf_Click" /><br />
-            <asp:MultiView ID="Contra" runat="server">
-                <asp:View ID="vOpcion1" runat="server">
-                    <h4>Cambiar Contraseña</h4>
-                    <p><asp:TextBox class="form-control" runat="server" ID="txtContrasenaA" placeholder="Contraseña Actual" TextMode="Password"></asp:TextBox></p>
-                    <p><asp:TextBox class="form-control" runat="server" ID="txtContrasenaR" placeholder="Repita Contraseña" TextMode="Password"></asp:TextBox></p>
-                    <p><asp:TextBox class="form-control" runat="server" ID="txtContrasenaNueva" placeholder="Nueva Conraseña" TextMode="Password"></asp:TextBox></p>
-                    <asp:Button class="btn btn-primary" Text="Cambiar Contraseña" runat="server" ID="Button1" OnClick="btnCambiar_Click" />
-                </asp:View>                
-            </asp:MultiView>
-            <br /><br />
-            <div  align="center">
-                <asp:GridView ID="gvVentas" runat="server" class="table"></asp:GridView>
-            </div>
-        </div> 
+    
+                <div class="jumbotron" align="center">
+                    <img width="200px" src="imagenes/perro.svg"/>
+                    <h1><asp:label id="lblNombre1" runat="server" Text="a "></asp:label></h1>
+                    <p class="lead">Bienvenido a nuestro Sistema de Ventas en ASP.NET <BR />Administra tus Productos, Boletas y más.</p>                    
+                    <div align="center">
+                        <asp:Button class="btn btn-info" runat="server" ID="btnBoleta" Text="Boletas" Width="120px" OnClick="btnBoleta_Click" />
+                        <asp:Button class="btn btn-info" runat="server" ID="btnProducto" Text="Productos" Width="120px" OnClick="btnProducto_Click" />
+                        <asp:Button class="btn btn-info" runat="server" ID="btnCategoria" Text="Categorias" Width="120px" OnClick="btnCategoria_Click"/>
+                                                          
+                    </div>
+                    <br />
+                    <div>
+                        <asp:Button class="btn btn-danger" runat="server" ID="btnEliminar" text="Eliminar Cuenta" OnClick="btnEliminar_Click" Width="120px" />
+                        <asp:Button class="btn btn-danger" runat="server" ID="btnCerrar" Text="Cerrar Sesion" Width="120px" OnClick="btnCerrar_Click" />
+                    </div>
+                </div>
 </asp:Content>

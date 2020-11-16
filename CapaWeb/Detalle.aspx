@@ -5,7 +5,7 @@
             <p><asp:TextBox class="form-control" runat="server" ID="txtNroBoleta" placeholder="Número de Boleta" ></asp:TextBox></p>
             <p><asp:TextBox class="form-control" runat="server" ID="txtCodProducto" placeholder="Codigo de Producto"></asp:TextBox></p>
             <p><asp:TextBox class="form-control" runat="server" ID="txtCantidad" placeholder="Cantidad"></asp:TextBox></p>            
-            <p><asp:TextBox class="form-control" runat="server" ID="txtPrecioUnitario" placeholder="Precio Unitario"></asp:TextBox></p>
+            <!--<p><asp:TextBox class="form-control" runat="server" ID="txtPrecioUnitario" placeholder="Precio Unitario"></asp:TextBox></p>-->
         </div>
         <div  align="center">
             <asp:Button class="btn btn-success" Text="Agregar" runat="server" ID="btnAgregar" OnClick="btnAgregar_Click" />

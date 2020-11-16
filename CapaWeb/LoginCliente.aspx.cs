@@ -19,6 +19,7 @@ namespace CapaWeb
         private ServiceReferenceUsuario.wsUsuarioSoapClient servicio2 = new ServiceReferenceUsuario.wsUsuarioSoapClient();
         private ServiceReferenceVendedor.wsVendedorSoapClient servicio3 = new ServiceReferenceVendedor.wsVendedorSoapClient();
 
+        int Estado;
         protected void Page_Load(object sender, EventArgs e)
         {
             Response.AppendHeader("Cache-Control", "no-store");
@@ -52,13 +53,15 @@ namespace CapaWeb
         
 
         protected void btnCliente_Click(object sender, EventArgs e)
-        {
+        {            
             mvEjemplo.ActiveViewIndex = 0;
+            Estado = 1;
         }
 
         protected void btnVendedor_Click(object sender, EventArgs e)
         {
             mvEjemplo.ActiveViewIndex = 1;
+            Estado = 2;
         }
 
         protected void btnLoguinCliente_Click1(object sender, EventArgs e)
@@ -92,6 +95,11 @@ namespace CapaWeb
             }
             else
                 Response.Write("<script>alert('" + mensaje + "');</script>");
+        }
+
+        protected void btnIniciar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AgregarCliente.aspx");
         }
     }
 }

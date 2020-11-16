@@ -64,5 +64,36 @@ namespace CapaWeb
             if (servicio.Agregar(CodCategoria, Nombre, CategoriaPadre))
                 Listar();
         }
+
+        protected void gvCategoria_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gvCategoria.PageIndex = e.NewPageIndex;
+            Listar();
+        }
+
+        protected void gvCategoria_PageIndexChanging1(object sender, GridViewPageEventArgs e)
+        {
+
+        }
+
+        protected void btnBoleta_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Boleta.aspx");
+        }
+
+        protected void btnProducto_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Producto.aspx");
+        }
+
+        protected void btnCategoria_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Categoria.aspx");
+        }
+
+        protected void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("LoginCliente.aspx");
+        }
     }
 }

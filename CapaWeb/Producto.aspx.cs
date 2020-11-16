@@ -19,6 +19,7 @@ namespace CapaWeb
                 Listar();
         }
 
+        
         private void Listar()
         {
             gvProducto.DataSource = servicio.Listar();
@@ -71,6 +72,33 @@ namespace CapaWeb
                 gvProducto.DataSource = servicio.Buscar(texto, "Nombre");
                 gvProducto.DataBind();
             }
+        }
+
+        protected void gvProducto_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gvProducto.PageIndex = e.NewPageIndex;
+            Listar();
+        }
+
+        
+        protected void btnCategoria_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Categoria.aspx");
+        }
+
+        protected void btnBoleta_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Boleta.aspx");
+        }
+
+        protected void btnProducto_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Producto.aspx");
+        }
+
+        protected void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("LoginCliente.aspx");
         }
     }
 }

@@ -16,5 +16,7 @@ namespace CapaNegocio.Interface
         bool Eliminar(String NroBoleta);
         bool Actualizar(Boleta boleta);
         DataSet Buscar(String texto, string criterio);
+        DataSet ListarBoleta(string NroBoleta);
+        DataSet ListarDetalle(string NroBoleta);
     }
 }

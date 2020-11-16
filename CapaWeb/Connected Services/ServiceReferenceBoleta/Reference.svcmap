@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="cadb716d-64aa-4fe2-b635-df85c8ec817b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8fb9f6c3-2ba5-422d-8531-9f674b5ad647" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,8 +22,8 @@
     <MetadataSource Address="https://localhost:44355/wsBoleta.asmx" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="wsBoleta.disco" MetadataType="Disco" ID="c9bb2705-9a37-49ab-b7f7-3c2f70ddea81" SourceId="1" SourceUrl="https://localhost:44355/wsBoleta.asmx?disco" />
-    <MetadataFile FileName="wsBoleta.wsdl" MetadataType="Wsdl" ID="3ccb1e98-c088-42b8-b823-e3cecd44eb76" SourceId="1" SourceUrl="https://localhost:44355/wsBoleta.asmx?wsdl" />
+    <MetadataFile FileName="wsBoleta.disco" MetadataType="Disco" ID="cdd2f0ba-d493-404d-b672-960b42422208" SourceId="1" SourceUrl="https://localhost:44355/wsBoleta.asmx?disco" />
+    <MetadataFile FileName="wsBoleta.wsdl" MetadataType="Wsdl" ID="31230778-28ab-4608-b9af-3c71eb67e4fa" SourceId="1" SourceUrl="https://localhost:44355/wsBoleta.asmx?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
